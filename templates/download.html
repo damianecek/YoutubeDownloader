@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon.png') }}">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color: #070707;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: none;
+  line-height: 22px;
+  background-color: #F0EFEE;
+  border:1px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  outline: 0;
+}
+
+.feedback-input:focus { border:1px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#EE3A43;
+  border-radius:none;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:14px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+[type="submit"]:hover { background:#CC4949; }
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+  .heading{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: white;
+  }
+  .red{
+    color: #CC4949;
+  }
+  a{
+    color: #CC4949;
+    font-size: larger;
+  }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h1 class="heading">{{message}}</h1>
+        <a href="/">{{button}}</a>
+    </div>
+</body>
+</html>
